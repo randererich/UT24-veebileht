@@ -3,153 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LTMTÜ</title>
-    <style>
-        /* Reset some default browser styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        /* Body and main container styling */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            color: #333;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        /* Header */
-        header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 20px 0;
-        }
-
-        header h1 {
-            font-size: 2rem;
-            color: #333;
-        }
-
-        /* Navigation */
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-        }
-
-        nav ul li {
-            display: inline;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-        }
-
-        nav ul li a:hover {
-            color: #007bff;
-        }
-
-        /* Main banner */
-        .banner {
-            text-align: center;
-            padding: 60px 0;
-            background-color: #00ffcc;
-            color: white;
-            margin-bottom: 40px;
-        }
-
-        .banner h2 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-
-        .banner p {
-            font-size: 1.2rem;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .banner button {
-            background-color: white;
-            color: #007bff;
-            border: none;
-            padding: 10px 20px;
-            font-size: 1rem;
-            cursor: pointer;
-            margin-top: 20px;
-        }
-
-        /* Blog posts */
-        .blog-section {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-
-        .post {
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            transition: transform 0.3s;
-        }
-
-        .post img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-
-        .post-content {
-            padding: 20px;
-        }
-
-        .post-content h3 {
-            font-size: 1.5rem;
-            color: #333;
-            margin-bottom: 10px;
-        }
-
-        .post-content p {
-            font-size: 1rem;
-            color: #555;
-            margin-bottom: 10px;
-        }
-
-        .post-content a {
-            text-decoration: none;
-            color: #007bff;
-            font-weight: bold;
-        }
-
-        .post:hover {
-            transform: translateY(-5px);
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #333;
-            color: white;
-            margin-top: 40px;
-        }
-
-        footer p {
-            font-size: 0.9rem;
-        }
-    </style>
+    <title>My Blog</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header class="container">
@@ -167,7 +22,7 @@
     <section class="banner">
         <h2>Welcome to My Blog</h2>
         <p>Discover articles on tech, programming, and more!</p>
-        <button onclick="window.location.href='#blog'">Read Latest Posts</button>
+        <button onclick="redirectToBlog()">Read Latest Posts</button>
     </section>
 
     <section id="blog" class="container blog-section">
@@ -202,5 +57,7 @@
     <footer>
         <p>&copy; 2024 My Blog. All rights reserved.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
