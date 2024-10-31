@@ -7,13 +7,6 @@ Highlight: Neon Red #ff3131 (use sparingly for urgency, error messages, or key f
 Text: Light Gray #e0e0e0 (for main body text) and Off-white #f4f4f4 (for headings)
 */
 
-{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body and main container styling */
 body {
     font-family: monospace, monospace;
     background-color: #ffe700;
@@ -22,13 +15,17 @@ body {
 }
 
 .container {
-    width: 90%;
-    max-width: 1200px;
+    background-color: #ffe700;
+    color: #121212;
+    position: sticky ;
     margin: 0 auto;
     padding: 20px;
+    top: 0 ;
+    z-index: 10000;
+    border: #00ffff ;
+    border: 3px solid #00ffff;
 }
 
-/* Header */
 header {
     display: flex;
     align-items: center;
@@ -75,10 +72,15 @@ nav ul li a:hover {
     border: 3px solid #00ffff;
     box-shadow: 0 0 15px #ffe700, 0 0 30px rgba(255, 231, 0, 0.5);
     background-image: url('https://media.newyorker.com/photos/5b0da55154617935a4921f9d/master/w_1600%2Cc_limit/Burdick-FlatEarth2.jpg');
-    background-size: cover; /* Ensures the image covers the entire banner */
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     opacity: 0.9;
+    padding: 60px 20px;
+}
+
+.banner-content {
+    padding: 0 120px;
 }
 
 .banner h2 {
@@ -114,7 +116,7 @@ nav ul li a:hover {
     right: 0;
     bottom: 0;
     border: none ;
-    filter: blur(8px); /* Stronger Glow */
+    filter: blur(8px);
     opacity: 0.8;
 }
 .button:hover {
@@ -127,7 +129,6 @@ nav ul li a:hover {
     margin-top: 20px;
 }
 
-/* Blog posts */
 .blog-section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -135,11 +136,12 @@ nav ul li a:hover {
 }
 
 .post {
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #ffe700;
     overflow: hidden;
     transition: transform 0.3s;
+    border: #00ffff ;
+    border: 3px solid #00ffff;
+    box-shadow: 0 0 15px #ffe700, 0 0 30px rgba(255, 231, 0, 0.5);
 }
 
 .post img {
@@ -154,7 +156,7 @@ nav ul li a:hover {
 
 .post-content h3 {
     font-size: 1.5rem;
-    color: #333;
+    color: #121212;
     margin-bottom: 10px;
 }
 
@@ -166,20 +168,23 @@ nav ul li a:hover {
 
 .post-content a {
     text-decoration: none;
-    color: #007bff;
+    color: #00ffff;
     font-weight: bold;
 }
 
 .post:hover {
     transform: translateY(-5px);
+    color: #ff3131;
 }
 
-/* Footer */
+div div a:hover {
+    color: #ff007d;
+}
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #333;
-    color: white;
+    background-color: #ffe700;
+    color: #121212;
     margin-top: 40px;
 }
 
