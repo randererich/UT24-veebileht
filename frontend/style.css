@@ -1,5 +1,13 @@
-/* Reset some default browser styles */
-* {
+/* 
+Background: Dark Charcoal #121212 (or a gradient from charcoal to a slightly lighter shade like #1f1f1f for depth)
+Primary Accent: Neon Yellow #f9c80e (Cyberpunk’s iconic yellow for highlights, buttons, and headings)
+Secondary Accent: Electric Cyan #00ffff (used in interactive elements or accents)
+Additional Accent: Magenta Pink #ff007d (for important elements or secondary call-to-actions)
+Highlight: Neon Red #ff3131 (use sparingly for urgency, error messages, or key focal points)
+Text: Light Gray #e0e0e0 (for main body text) and Off-white #f4f4f4 (for headings)
+*/
+
+{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -7,9 +15,10 @@
 
 /* Body and main container styling */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+    font-family: monospace, monospace;
+    background-color: #ffe700;
     color: #333;
+    border: 3px solid #00ffff;
 }
 
 .container {
@@ -29,7 +38,7 @@ header {
 
 header h1 {
     font-size: 2rem;
-    color: #333;
+    color: #121212;
 }
 
 /* Navigation */
@@ -45,37 +54,72 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #333;
+    color: #121212;
     font-weight: bold;
 }
 
 nav ul li a:hover {
-    color: #007bff;
+    color: #ff007d;
 }
 
 /* Main banner */
 .banner {
     text-align: center;
     padding: 60px 0;
-    background-color: #007bff;
-    color: white;
+    background-color: #f1da0c;
+    color: #121212;
     margin-bottom: 40px;
+    opacity: 1;
+    border: #00ffff ;
+    font-family: monospace, monospace;
+    border: 3px solid #00ffff;
+    box-shadow: 0 0 15px #ffe700, 0 0 30px rgba(255, 231, 0, 0.5);
+    background-image: url('https://media.newyorker.com/photos/5b0da55154617935a4921f9d/master/w_1600%2Cc_limit/Burdick-FlatEarth2.jpg');
+    background-size: cover; /* Ensures the image covers the entire banner */
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.9;
 }
 
 .banner h2 {
     font-size: 2.5rem;
     margin-bottom: 10px;
+
 }
 
 .banner p {
     font-size: 1.2rem;
     max-width: 600px;
     margin: 0 auto;
+    
 }
 
-.banner button {
-    background-color: white;
-    color: #007bff;
+.button {
+    background-color: #ffe700;
+    color: #121212;
+    border: 2px solid #ff3131;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.button::before {
+    background-color: #ffe700;
+    color: #121212;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: none ;
+    filter: blur(8px); /* Stronger Glow */
+    opacity: 0.8;
+}
+.button:hover {
+    background-color: #ffe700;
+    color: #121212;
     border: none;
     padding: 10px 20px;
     font-size: 1rem;
