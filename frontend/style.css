@@ -21,7 +21,7 @@ body {
     margin: 0 auto;
     padding: 20px;
     top: 0 ;
-    z-index: 10000;
+    z-index: 1000;
     border: #00ffff ;
     border: 3px solid #00ffff;
 }
@@ -84,13 +84,14 @@ nav ul li a:hover {
 }
 
 .banner h2 {
-    font-size: 2.5rem;
+    font-size: 4rem;
     margin-bottom: 10px;
+    color: #121212; /* Change this to the desired text color */
 
 }
 
 .banner p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     max-width: 600px;
     margin: 0 auto;
     
@@ -99,41 +100,44 @@ nav ul li a:hover {
 .button {
     background-color: #ffe700;
     color: #121212;
-    border: 2px solid #ff3131;
+    border: 2px solid #00ffff;
     padding: 10px 20px;
     font-size: 1rem;
     cursor: pointer;
     margin-top: 20px;
+    position: relative;
+    font-family: inherit;
 }
 
 .button::before {
     background-color: #ffe700;
-    color: #121212;
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    border: none ;
     filter: blur(8px);
     opacity: 0.8;
+    z-index: -1;
 }
+
 .button:hover {
-    background-color: #ffe700;
-    color: #121212;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    cursor: pointer;
-    margin-top: 20px;
+    background-color: #ff3131;
+    color: #ffffff;
+    border-color: #00ffff;
 }
+
+
 
 .blog-section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
+    position: relative;
+    z-index: 900;
 }
+
 
 .post {
     background-color: #ffe700;
@@ -142,8 +146,12 @@ nav ul li a:hover {
     border: #00ffff ;
     border: 3px solid #00ffff;
     box-shadow: 0 0 15px #ffe700, 0 0 30px rgba(255, 231, 0, 0.5);
+    position: relative ;
 }
 
+.post:hover {
+    background-color: #ff3131;
+}
 .post img {
     width: 100%;
     height: 200px;
@@ -178,7 +186,7 @@ nav ul li a:hover {
 }
 
 div div a:hover {
-    color: #ff007d;
+    color: #ffe700;
 }
 footer {
     text-align: center;
@@ -191,3 +199,4 @@ footer {
 footer p {
     font-size: 0.9rem;
 }
+ 
