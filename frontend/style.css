@@ -1,0 +1,206 @@
+/* 
+    BACKGROUND BLUE: #0fa4af
+    BORDER DARK BLUE: #003135
+    HOVER LIGHT BLUE: #afdde5
+*/
+   
+
+/* Main body, ehk veebilehel taust äärest ääreni */
+body {
+    font-family: monospace, monospace;
+    background-color: #0fa4af;
+    color: #333;
+    border: 3px solid #003135;
+}
+
+/* Kõige ülemisem 'banner' mis liigub stickyna kaasa ja on alati koige peal */
+
+.container {
+    background-color: #0fa4af;
+    color: #121212;
+    position: sticky ;
+    margin: 0 auto;
+    padding: 20px;
+    top: 0 ;
+    z-index: 1000;
+    border: #003135 ;
+    border: 3px solid #003135;
+}
+
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: #121212;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #121212;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #afdde5;
+}
+
+/* Main banner */
+.banner {
+    text-align: center;
+    padding: 60px 0;
+    background-color: #003135;
+    color: #121212;
+    margin-bottom: 40px;
+    opacity: 1;
+    border: #003135 ;
+    font-family: monospace, monospace;
+    border: 3px solid #003135;
+    box-shadow: 0 0 15px #0fa4af, 0 0 30px rgba(255, 231, 0, 0.5);
+    background-image: url('https://media.newyorker.com/photos/5b0da55154617935a4921f9d/master/w_1600%2Cc_limit/Burdick-FlatEarth2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.9;
+    padding: 60px 20px;
+}
+
+.banner-content {
+    padding: 0 120px;
+}
+
+.banner h2 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+    color: #121212; /* Change this to the desired text color */
+
+}
+
+.banner p {
+    font-size: 1.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.button {
+    background-color: #0fa4af;
+    color: #121212;
+    border: 2px solid #003135;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 20px;
+    position: relative;
+    font-family: inherit;
+}
+
+.button::before {
+    background-color: #0fa4af;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    filter: blur(8px);
+    opacity: 0.8;
+    z-index: -1;
+}
+
+.button:hover {
+    background-color: #afdde5;
+    color: #ffffff;
+    border-color: #003135;
+}
+
+
+
+.blog-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    border-left: none;
+    border-right: none;
+    position: relative;
+    z-index: 900;
+}
+
+
+.post {
+    background-color: #0fa4af;
+    overflow: hidden;
+    transition: transform 0.3s;
+    border: #003135 ;
+    border-left: none;
+    border-right: none;
+    border: 3px solid #003135;
+    position: relative ;
+}
+
+.post:hover {
+    background-color: #afdde5;
+}
+.post img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.post-content {
+    padding: 20px;
+}
+
+.post-content h3 {
+    font-size: 1.5rem;
+    color: #121212;
+    margin-bottom: 10px;
+}
+
+.post-content p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.post-content a {
+    text-decoration: none;
+    color: #003135;
+    font-weight: bold;
+}
+
+.post:hover {
+    transform: translateY(-5px);
+    color: #afdde5;
+}
+
+div div a:hover {
+    color: #0fa4af;
+}
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #0fa4af;
+    color: #121212;
+    margin-top: 40px;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+ 
