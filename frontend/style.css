@@ -185,3 +185,38 @@ footer p {
 .post-reply p {
     color: #333;
 }
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px;
+    justify-content: center;
+    background-color: #0fa4af;
+}
+
+.gallery-item {
+    border: 2px solid #000;
+    background-color: #0fa4af;
+    text-align: center;
+    height: 300px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    background-color: #0fa4af;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    background-color: #0fa4af;
+    border-radius: 5px;
+}
+
