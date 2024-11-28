@@ -1,21 +1,20 @@
 body {
-    font-family: monospace, monospace;
+    font-family: monospace;
     background-color: #0fa4af;
     color: #333;
     border: 3px solid #003135;
 }
 
-.container {
+.container, .chat_container {
     background-color: #0fa4af;
     color: #121212;
-    position: sticky ;
+    position: sticky;
     margin: 0 auto;
     padding: 20px;
-    top: 0 ;
+    top: 0;
     z-index: 1000;
-    border: #003135 ;
     border: 3px solid #003135;
-    font-family: monospace, mo;
+    font-family: monospace;
 }
 
 header {
@@ -24,44 +23,42 @@ header {
     justify-content: space-between;
     padding: 20px 0;
 }
-.home_button:before {
-    color: #003135;
-}
-.home_button:hover {
-    color: #afdde5;
-}
+
 nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
-}
-
-nav ul li {
-    display: inline;
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li a {
     text-decoration: none;
     color: #121212;
     font-weight: bold;
+    transition: color 0.3s;
 }
 
 nav ul li a:hover {
     color: #afdde5;
 }
 
+.home_button:before {
+    color: #003135;
+}
+
+.home_button:hover {
+    color: #afdde5;
+}
+
 /* Main banner */
 .banner {
     text-align: center;
-    padding: 60px 0;
     background-color: #003135;
     color: #121212;
     margin-bottom: 40px;
-    opacity: 1;
-    border: #003135 ;
-    font-family: monospace, monospace;
     border: 3px solid #003135;
-    box-shadow: 0 0 15px #0fa4af, 0 0 30px rgba(255, 231, 0, 0.5);
+    box-shadow: 0 0 15px #0fa4af, 0 0 30px rgba(255, 231, 0.5);
     background-image: url('https://media.newyorker.com/photos/5b0da55154617935a4921f9d/master/w_1600%2Cc_limit/Burdick-FlatEarth2.jpg');
     background-size: cover;
     background-position: center;
@@ -70,22 +67,16 @@ nav ul li a:hover {
     padding: 60px 20px;
 }
 
-.banner-content {
-    padding: 0 120px;
-}
-
 .banner h2 {
     font-size: 4rem;
     margin-bottom: 10px;
-    color: #121212; /* Change this to the desired text color */
-
+    color: #121212;
 }
 
 .banner p {
     font-size: 1.5rem;
     max-width: 600px;
     margin: 0 auto;
-    
 }
 
 .button {
@@ -96,35 +87,34 @@ nav ul li a:hover {
     font-size: 1rem;
     cursor: pointer;
     margin-top: 20px;
-    position: relative;
     font-family: inherit;
+    transition: background-color 0.3s, color 0.3s;
 }
 
+.button:hover {
+    background-color: #afdde5;
+    color: #003135;
+}
+
+/* Blog sections */
 .blog-section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
     position: relative;
     z-index: 900;
-}   
+}
 
 .post {
     background-color: #0fa4af;
-    overflow: hidden;
-    transition: transform 0.3s;
-    border: #003135 ;
     border: 3px solid #003135;
-    /*box-shadow: 0 0 15px #0fa4af, 0 0 30px rgba(255, 231, 0, 0.5); */
-    position: relative ;
+    overflow: hidden;
+    transition: transform 0.3s, background-color 0.3s;
 }
 
 .post:hover {
     background-color: #afdde5;
-}
-.post img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+    transform: translateY(-5px);
 }
 
 .post-content {
@@ -140,23 +130,19 @@ nav ul li a:hover {
 .post-content p {
     font-size: 1rem;
     color: #555;
-    margin-bottom: 10px;
 }
 
 .post-content a {
     text-decoration: none;
     color: #003135;
     font-weight: bold;
+    transition: color 0.3s;
 }
 
-.post:hover {
-    transform: translateY(-5px);
-    color: #afdde5;
-}
-
-div div a:hover {
+.post-content a:hover {
     color: #0fa4af;
 }
+
 footer {
     text-align: center;
     padding: 20px;
@@ -168,4 +154,34 @@ footer {
 footer p {
     font-size: 0.9rem;
 }
- 
+
+/* Blog Section Title */
+.blog-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #121212;
+    margin-bottom: 40px;
+}
+
+/* Post Reply */
+.post-reply {
+    margin-left: 20px;
+    padding: 15px;
+    border: 4px solid #003135;
+    font-size: 0.9rem;
+}
+
+.post-reply .post-author {
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.post-reply .username {
+    font-weight: bold;
+    color: #003135;
+}
+
+.post-reply p {
+    color: #333;
+}
