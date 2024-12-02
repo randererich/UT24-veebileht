@@ -1,30 +1,36 @@
-/* 
-    BACKGROUND BLUE: #0fa4af
-    BORDER DARK BLUE: #003135
-    HOVER LIGHT BLUE: #afdde5
-*/
-   
-
-/* Main body, ehk veebilehel taust äärest ääreni */
 body {
-    font-family: monospace, monospace;
+    font-family: monospace;
     background-color: #0fa4af;
     color: #333;
     border: 3px solid #003135;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+    position: relative;
 }
 
-/* Kõige ülemisem 'banner' mis liigub stickyna kaasa ja on alati koige peal */
-
+/* Peamenüü stiilid */
 .container {
     background-color: #0fa4af;
     color: #121212;
-    position: sticky ;
+    position: sticky;
     margin: 0 auto;
     padding: 20px;
-    top: 0 ;
+    top: 0;
     z-index: 1000;
-    border: #003135 ;
-    border: 3px solid #003135;
+    border-bottom: 3px solid #003135;
+    font-family: monospace;
+    font-size: x-large;
+}
+
+.container2 {
+    background-color: #0fa4af;
+    color: #121212;
+    position: sticky;
+    margin: 0 auto;
+    padding: 10px;
+    border-bottom: 3px solid #003135;
+    font-family: monospace;
+    font-size: x-large;
+    margin-bottom: 10px;
 }
 
 header {
@@ -34,44 +40,55 @@ header {
     padding: 20px 0;
 }
 
-header h1 {
-    font-size: 2rem;
-    color: #121212;
+header a {
+    text-decoration: none;
+    color: #000;
 }
 
-/* Navigation */
+header a:visited {
+    color: #000;
+}
+
+header a:hover {
+    color: #afdde5;
+}
+
+/* Navigatsiooni stiilid */
 nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
-}
-
-nav ul li {
-    display: inline;
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li a {
     text-decoration: none;
     color: #121212;
     font-weight: bold;
+    transition: color 0.3s;
 }
 
 nav ul li a:hover {
     color: #afdde5;
 }
 
-/* Main banner */
-.banner {
+/* Kodunupu stiil */
+.home_button:before {
+    color: #003135;
+}
+
+.home_button:hover {
+    color: #afdde5;
+}
+
+/* Bänneri ja blogi pealkirja stiilid */
+.banner, .blog_title {
     text-align: center;
-    padding: 60px 0;
     background-color: #003135;
     color: #121212;
     margin-bottom: 40px;
-    opacity: 1;
-    border: #003135 ;
-    font-family: monospace, monospace;
-    border: 3px solid #003135;
-    box-shadow: 0 0 15px #0fa4af, 0 0 30px rgba(255, 231, 0, 0.5);
+    border-bottom: 3px solid #003135;
     background-image: url('https://media.newyorker.com/photos/5b0da55154617935a4921f9d/master/w_1600%2Cc_limit/Burdick-FlatEarth2.jpg');
     background-size: cover;
     background-position: center;
@@ -80,55 +97,11 @@ nav ul li a:hover {
     padding: 60px 20px;
 }
 
-.banner-content {
-    padding: 0 120px;
-}
-
 .banner h2 {
     font-size: 4rem;
     margin-bottom: 10px;
-    color: #121212; /* Change this to the desired text color */
-
-}
-
-.banner p {
-    font-size: 1.5rem;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.button {
-    background-color: #0fa4af;
     color: #121212;
-    border: 2px solid #003135;
-    padding: 10px 20px;
-    font-size: 1rem;
-    cursor: pointer;
-    margin-top: 20px;
-    position: relative;
-    font-family: inherit;
 }
-
-.button::before {
-    background-color: #0fa4af;
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    filter: blur(8px);
-    opacity: 0.8;
-    z-index: -1;
-}
-
-.button:hover {
-    background-color: #afdde5;
-    color: #ffffff;
-    border-color: #003135;
-}
-
-
 
 .blog-section {
     display: grid;
@@ -140,66 +113,211 @@ nav ul li a:hover {
     z-index: 900;
 }
 
-
+/* Postituste stiilid */
 .post {
     background-color: #0fa4af;
-    overflow: hidden;
-    transition: transform 0.3s;
-    border: #003135 ;
-    border-left: none;
-    border-right: none;
     border: 3px solid #003135;
-    position: relative ;
+    overflow: hidden;
+    transition: transform 0.3s, background-color 0.3s;
+    font-size: 2rem;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 100;
+    box-shadow: 0 0 15px #0fa4af, 0 0 10px rgba(255, 231, 0.5);
 }
 
 .post:hover {
     background-color: #afdde5;
+    transform: translateY(-5px);
 }
-.post img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+
+.container a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
 }
 
 .post-content {
     padding: 20px;
-}
-
-.post-content h3 {
-    font-size: 1.5rem;
-    color: #121212;
-    margin-bottom: 10px;
+    font-size: 2rem;
 }
 
 .post-content p {
-    font-size: 1rem;
-    color: #555;
-    margin-bottom: 10px;
+    font-size: 70%;
+    color: #121212;
+    padding: 15px;
 }
 
 .post-content a {
     text-decoration: none;
     color: #003135;
     font-weight: bold;
+    transition: color 0.3s;
 }
 
-.post:hover {
-    transform: translateY(-5px);
-    color: #afdde5;
-}
-
-div div a:hover {
+.post-content a:hover {
     color: #0fa4af;
 }
+
+/* Kommentaaride ja vastuste stiilid */
+.chat_post {
+    border: 3px solid #003135;
+    overflow: auto;
+    font-size: 2rem;
+    margin-top: 15px;
+    box-shadow: 0 0 15px #0fa4af, 0 0 10px rgba(255, 231, 0.5);
+    padding: 10px;
+    position: relative;
+}
+
+.post-reply {
+    margin-left: 20px;
+    padding: 10px;
+    border-left: 2px solid #ddd;
+}
+
+.post-reply .post-author {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: monospace monospace;
+}
+
+.post-reply .post-date {
+    font-weight: normal;
+}
+
+.username {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.post-reply p {
+    color: #333;
+}
+
+/* Galerii stiilid */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px;
+    justify-content: center;
+    background-color: #0fa4af;
+    border-top: 3px solid #003135;
+}
+
+.gallery-item {
+    border: 2px solid #000;
+    background-color: #0fa4af;
+    text-align: center;
+    height: 300px;
+    width: 380px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    background-color: #0fa4af;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: #0fa4af;
+    border-radius: 5px;
+    box-shadow: 0 0 15px #0fa4af, 0 0 15px rgba(255, 231, 0.5);
+}
+
+.post-date {
+    display: block;
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 5px;
+    margin-left: 20px;
+}
+
+/* Nupu stiilid */
+.action-button {
+    scale: 115%;
+    background-color: #0f5f67;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.action-button:hover {
+    background-color: #007c8b;
+}
+
+.new-post {
+    margin-left: 20px;
+}
+
+.reply-btn {
+    margin-left: 10px;
+}
+
+/* Hüpikakna stiilid */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    border: 2px solid #0fa4af;
+    padding: 20px;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.popup-content {
+    text-align: center;
+}
+
+.close-popup-btn {
+    background-color: #007c8b;
+    color: #003135;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color;
+}
+
+.text-blocks {
+    background-color: #0fa4af;
+    border-top: 3px solid #003135;
+    overflow: hidden;
+    transition: transform 0.3s, background-color 0.3s;
+    font-size: 2rem;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 100;
+}
+
+/* Jaluse stiilid */
 footer {
     text-align: center;
     padding: 20px;
     background-color: #0fa4af;
     color: #121212;
     margin-top: 40px;
+    border-top: 3px solid #003135;
 }
 
 footer p {
     font-size: 0.9rem;
 }
- 

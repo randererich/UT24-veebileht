@@ -1,22 +1,179 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="et">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <title>Foorumi Arutelu - Lame Maa</title>
 </head>
 <body>
+    <!-- Header Section -->
     <header class="container">
-        <h1>ELMTÜ</h1>
+        <a href="landing_page.html">
+            <h1>ELMTÜ</h1>
+        </a>
         <nav>
             <ul>
                 <li><a href="info.html">Info</a></li>
-                <li><a href="chat.html">Chat</a></li>
+                <li><a href="chat.html">Vestlus</a></li>
                 <li><a href="galerii.html">Galerii</a></li>
                 <li><a href="meist.html">Meist</a></li>
             </ul>
         </nav>
     </header>
-    <section id="blog" class="container blog-section">
+
+    <section class="banner">
+        <h2>SERVA-ÄÄRSED ARUTELUD</h2>
+    </section>
+
+    <section id="blog" class="container2">
+            <button class="action-button new-post" onclick="showPopup()">Loo uus postitus</button>
+
+
+    <div id="popups" class="popup">
+        <div class="popup-content">
+            <p>Lehekülg on hetkel hooldustööde tõttu suletud.</p>
+            <button class="action-button close-popup-btn" onclick="hidePopup()">OK</button>
+        </div>
+    </div>
+
+        <!-- Blog Post 1 -->
+        <div class="chat_post">
+            <div class="post-author">
+                <span class="username">MaailmaUurija</span>
+                <span class="post-date">03.11.2024</span>
+            </div>
+            <div class="post-content">
+                <p>
+                    Tere kõigile! Olen uurinud lame Maa teooriat ja see tõesti kõlab huvitavalt. Kas keegi siin usub, et Maa võiks olla lame?
+                </p>
+            </div>
+            <!-- Reply Button -->
+            <button class="action-button reply-btn" onclick="showPopup()">Vasta</button>
+        </div>
+
+        <!-- Blog Post 2 with Replies -->
+        <div class="chat_post">
+            <div class="post-author">
+                <span class="username">Kosmosetark</span>
+                <span class="post-date">05.11.2024</span>
+            </div>
+            <div class="post-content">
+                <p>
+                    Huvitav teooria, MaailmaUurija! Mõned ütlevad, et pole ühtegi tõelist fotot Maast kosmosest – ainult CGI. 
+                    Võib-olla on Maal hoopis teistsugune kuju, kui arvame.
+                </p>
+            </div>
+            <!-- Reply Button -->
+            <button class="action-button reply-btn" onclick="showPopup()">Vasta</button>
+
+            <div class="post-reply">
+                <div class="post-author">
+                    <span class="username">Teadmishimuline</span>
+                    <span class="post-date">05.11.2024</span>
+                </div>
+                <div class="post-content">
+                    <p>
+                        Just nii, Kosmosetark! Samuti olen märganud, et paljud asjad on salastatud. Miks ei räägita meile tõtt?
+                    </p>
+                </div>
+                <!-- Reply Button -->
+                <button class="action-button reply-btn" onclick="showPopup()">Vasta</button>
+            </div>
+        </div>
+
+        <!-- Blog Post 3 -->
+        <div class="chat_post">
+            <div class="post-author">
+                <span class="username">MaailmaAvastaja</span>
+                <span class="post-date">06.11.2024</span>
+            </div>
+            <div class="post-content">
+                <p>
+                    Küsimus, mis mind painab – kui Maa oleks lame, miks ei ole see teadusmaailmas rohkem aktsepteeritud? Kas keegi oskab vastata?
+                </p>
+            </div>
+            <!-- Reply Button -->
+            <button class="action-button reply-btn" onclick="showPopup()">Vasta</button>
+        </div>
+
+        <!-- Blog Post 4 -->
+        <div class="chat_post">
+            <div class="post-author">
+                <span class="username">Skeptik</span>
+                <span class="post-date">07.11.2024</span>
+            </div>
+            <div class="post-content">
+                <p>
+                    Mina olen kindel, et teadus on usaldusväärne. Kas mõni tõsiseltvõetav teadlane on tõepoolest lameda Maa poolt sõna võtnud?
+                </p>
+            </div>
+            <!-- Reply Button -->
+            <button class="action-button reply-btn" onclick="showPopup()">Vasta</button>
+        </div>
+
+        <!-- Blog Post 5 with Replies -->
+        <div class="chat_post">
+            <div class="post-author">
+                <span class="username">Teadushuviline</span>
+                <span class="post-date">08.11.2024</span>
+            </div>
+            <div class="post-content">
+                <p>
+                    Olen uurinud. Tõendeid lameda Maa kohta ei tundu usaldusväärsetest allikatest leiduvat. Palun viidake mulle mõni uuring!
+                </p>
+            </div>
+            <div class="post-reply">
+                <div class="post-author">
+                    <span class="username">Kosmosetark</span>
+                    <span class="post-date">08.11.2024</span>
+                </div>
+                <div class="post-content">
+                    <p>
+                        Tõsi, paljud tõendid on kaheldavad, aga samas, miks me ei saa täielikku juurdepääsu kosmosefotodele?
+                    </p>
+                </div>
+                <!-- Reply Button -->
+                <button class="action-button reply-btn" onclick="showPopup()">Vasta</button>
+            </div>
+        </div>
+
+        <!-- Blog Post 6 -->
+        <div class="chat_post">
+            <div class="post-author">
+                <span class="username">Arutleja</span>
+                <span class="post-date">09.11.2024</span>
+            </div>
+            <div class="post-content">
+                <p>
+                    Kõikidel teooriatel on oma pooldajad ja vastased. Kas siin leidub tõesti keegi, kes on Maa kuju küsimuses täiesti neutraalne?
+                </p>
+            </div>
+            <!-- Reply Button -->
+            <button class="action-button reply-btn" onclick="showPopup()">Vasta</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 ELMTÜ. Kõik õigused kaitstud.</p>
+    </footer>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <p>Lehekülg on hetkel hooldustööde tõttu suletud.</p>
+            <button class="close-popup-btn" onclick="hidePopup()">OK</button>
+        </div>
+    </div>
+    <!-- JS koodi koostamisel kasutasime ChatGPT abi--> >
+    <script>
+        function showPopup() {
+            document.getElementById('popup').style.display = 'block';
+        }
+
+        function hidePopup() {
+            document.getElementById('popup').style.display = 'none';
+        }
+    </script>
 </body>
-    
+</html>
