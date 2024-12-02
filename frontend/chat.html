@@ -20,30 +20,41 @@
                 <li><a href="meist.html">Meist</a></li>
             </ul>
         </nav>
+        <button class="action-button new-post-btn" onclick="showPopup()">Loo uus postitus</button>
     </header>
 
-    <!-- Blog Section -->
+
     <section id="blog" class="container2">
-        <h2 class="blog-title">VESTLUS: LAMEMAA</h2>
+        <h2 class="blog-title">SERVA-ÄÄRSED ARUTELUD</h2>
+
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <p>Lehekülg on hetkel hooldustööde tõttu suletud.</p>
+            <button class="action-button close-popup-btn" onclick="hidePopup()">OK</button>
+        </div>
+    </div>
 
         <!-- Blog Post 1 -->
         <div class="post">
             <div class="post-author">
                 <span class="username">MaailmaUurija</span>
-                <span class="timestamp">Postitatud 3. november 2024, 14:15</span>
+                <span class="post-date">03.11.2024</span>
             </div>
             <div class="post-content">
                 <p>
                     Tere kõigile! Olen uurinud lame Maa teooriat ja see tõesti kõlab huvitavalt. Kas keegi siin usub, et Maa võiks olla lame?
                 </p>
             </div>
+            <!-- Reply Button -->
+            <button class="action-button reply-btn" onclick="showPopup()">Vasta</button>
         </div>
 
         <!-- Blog Post 2 with Replies -->
         <div class="post">
             <div class="post-author">
                 <span class="username">Kosmosetark</span>
-                <span class="timestamp">Postitatud 5. november 2024, 16:45</span>
+                <span class="post-date">05.11.2024</span>
             </div>
             <div class="post-content">
                 <p>
@@ -51,17 +62,21 @@
                     Võib-olla on Maal hoopis teistsugune kuju, kui arvame.
                 </p>
             </div>
-            <!-- Reply 1 -->
+            <!-- Reply Button -->
+            <button class="action-button reply-btn" onclick="showPopup()">Vasta</button>
+
             <div class="post-reply">
                 <div class="post-author">
                     <span class="username">Teadmishimuline</span>
-                    <span class="timestamp">Postitatud 5. november 2024, 17:00</span>
+                    <span class="post-date">05.11.2024</span>
                 </div>
                 <div class="post-content">
                     <p>
                         Just nii, Kosmosetark! Samuti olen märganud, et paljud asjad on salastatud. Miks ei räägita meile tõtt?
                     </p>
                 </div>
+                <!-- Reply Button -->
+                <button class="action-button reply-btn" onclick="showPopup()">Vasta</button>
             </div>
         </div>
 
@@ -69,13 +84,71 @@
         <div class="post">
             <div class="post-author">
                 <span class="username">MaailmaAvastaja</span>
-                <span class="timestamp">Postitatud 6. november 2024, 09:30</span>
+                <span class="post-date">06.11.2024</span>
             </div>
             <div class="post-content">
                 <p>
                     Küsimus, mis mind painab – kui Maa oleks lame, miks ei ole see teadusmaailmas rohkem aktsepteeritud? Kas keegi oskab vastata?
                 </p>
             </div>
+            <!-- Reply Button -->
+            <button class="action-button reply-btn" onclick="showPopup()">Vasta</button>
+        </div>
+
+        <!-- Blog Post 4 -->
+        <div class="post">
+            <div class="post-author">
+                <span class="username">Skeptik</span>
+                <span class="post-date">07.11.2024</span>
+            </div>
+            <div class="post-content">
+                <p>
+                    Mina olen kindel, et teadus on usaldusväärne. Kas mõni tõsiseltvõetav teadlane on tõepoolest lameda Maa poolt sõna võtnud?
+                </p>
+            </div>
+            <!-- Reply Button -->
+            <button class="action-button reply-btn" onclick="showPopup()">Vasta</button>
+        </div>
+
+        <!-- Blog Post 5 with Replies -->
+        <div class="post">
+            <div class="post-author">
+                <span class="username">Teadushuviline</span>
+                <span class="post-date">08.11.2024</span>
+            </div>
+            <div class="post-content">
+                <p>
+                    Olen uurinud. Tõendeid lameda Maa kohta ei tundu usaldusväärsetest allikatest leiduvat. Palun viidake mulle mõni uuring!
+                </p>
+            </div>
+            <div class="post-reply">
+                <div class="post-author">
+                    <span class="username">Kosmosetark</span>
+                    <span class="post-date">08.11.2024</span>
+                </div>
+                <div class="post-content">
+                    <p>
+                        Tõsi, paljud tõendid on kaheldavad, aga samas, miks me ei saa täielikku juurdepääsu kosmosefotodele?
+                    </p>
+                </div>
+                <!-- Reply Button -->
+                <button class="action-button reply-btn" onclick="showPopup()">Vasta</button>
+            </div>
+        </div>
+
+        <!-- Blog Post 6 -->
+        <div class="post">
+            <div class="post-author">
+                <span class="username">Arutleja</span>
+                <span class="post-date">09.11.2024</span>
+            </div>
+            <div class="post-content">
+                <p>
+                    Kõikidel teooriatel on oma pooldajad ja vastased. Kas siin leidub tõesti keegi, kes on Maa kuju küsimuses täiesti neutraalne?
+                </p>
+            </div>
+            <!-- Reply Button -->
+            <button class="action-button reply-btn" onclick="showPopup()">Vasta</button>
         </div>
     </section>
 
@@ -83,5 +156,23 @@
     <footer>
         <p>&copy; 2024 ELMTÜ. Kõik õigused kaitstud.</p>
     </footer>
+
+    <!-- Popup koodi aitas Randeri suunistel koostada ChatGPT -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <p>Lehekülg on hetkel hooldustööde tõttu suletud.</p>
+            <button class="close-popup-btn" onclick="hidePopup()">OK</button>
+        </div>
+    </div>
+
+    <script>
+        function showPopup() {
+            document.getElementById('popup').style.display = 'block';
+        }
+
+        function hidePopup() {
+            document.getElementById('popup').style.display = 'none';
+        }
+    </script>
 </body>
 </html>

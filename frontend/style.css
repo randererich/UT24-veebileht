@@ -1,8 +1,10 @@
+/* General styles */
 body {
     font-family: monospace;
     background-color: #0fa4af;
     color: #333;
     border: 3px solid #003135;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
 }
 
 .container, .chat_container {
@@ -17,6 +19,7 @@ body {
     font-family: monospace;
 }
 
+/* Header styles */
 header {
     display: flex;
     align-items: center;
@@ -24,6 +27,20 @@ header {
     padding: 20px 0;
 }
 
+header a {
+    text-decoration: none; /* Remove underline */
+    color: #000; /* Set the desired color (e.g., black) */
+}
+
+header a:visited {
+    color: #000; /* Keep the same color for visited links */
+}
+
+header a:hover {
+    color: #333; /* Optional: slightly darker on hover */
+}
+
+/* Navigation styles */
 nav ul {
     list-style: none;
     display: flex;
@@ -43,6 +60,7 @@ nav ul li a:hover {
     color: #afdde5;
 }
 
+/* Button styles */
 .home_button:before {
     color: #003135;
 }
@@ -79,23 +97,6 @@ nav ul li a:hover {
     margin: 0 auto;
 }
 
-.button {
-    background-color: #0fa4af;
-    color: #121212;
-    border: 2px solid #003135;
-    padding: 10px 20px;
-    font-size: 1rem;
-    cursor: pointer;
-    margin-top: 20px;
-    font-family: inherit;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.button:hover {
-    background-color: #afdde5;
-    color: #003135;
-}
-
 /* Blog sections */
 .blog-section {
     display: grid;
@@ -105,11 +106,15 @@ nav ul li a:hover {
     z-index: 900;
 }
 
+/* Post styles */
 .post {
     background-color: #0fa4af;
     border: 3px solid #003135;
     overflow: hidden;
     transition: transform 0.3s, background-color 0.3s;
+    font-size: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+    
 }
 
 .post:hover {
@@ -119,17 +124,18 @@ nav ul li a:hover {
 
 .post-content {
     padding: 20px;
+    font-size: 2rem;
 }
 
 .post-content h3 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: #121212;
     margin-bottom: 10px;
 }
 
 .post-content p {
     font-size: 1rem;
-    color: #555;
+    color: #121212;
 }
 
 .post-content a {
@@ -143,19 +149,7 @@ nav ul li a:hover {
     color: #0fa4af;
 }
 
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #0fa4af;
-    color: #121212;
-    margin-top: 40px;
-}
 
-footer p {
-    font-size: 0.9rem;
-}
-
-/* Blog Section Title */
 .blog-title {
     text-align: center;
     font-size: 2.5rem;
@@ -166,9 +160,8 @@ footer p {
 /* Post Reply */
 .post-reply {
     margin-left: 20px;
-    padding: 15px;
-    border: 4px solid #003135;
-    font-size: 0.9rem;
+    padding: 10px;
+    border-left: 2px solid #ddd;
 }
 
 .post-reply .post-author {
@@ -177,15 +170,16 @@ footer p {
     font-size: 0.9rem;
 }
 
-.post-reply .username {
-    font-weight: bold;
-    color: #003135;
+.username {
+    margin-left: 20px;
+    margin-top: 10px;
 }
 
 .post-reply p {
     color: #333;
 }
 
+/* Gallery styles */
 .gallery {
     display: flex;
     flex-wrap: wrap;
@@ -220,3 +214,76 @@ footer p {
     border-radius: 5px;
 }
 
+/* Date Styling */
+.post-date {
+    display: block;
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 5px;
+    margin-left: 20px;
+}
+
+.post {
+    margin-bottom: 20px;
+}
+
+/* Action buttons */
+.action-button {
+    background-color: #0f5f67;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.action-button:hover {
+    background-color: #007c8b;
+}
+
+.reply-btn {
+    margin-left: 10px;
+}
+
+/* Popup styles */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    border: 2px solid #0fa4af;
+    padding: 20px;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.popup-content {
+    text-align: center;
+}
+
+.close-popup-btn {
+    background-color: #007c8b;
+    color: #003135;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #0fa4af;
+    color: #121212;
+    margin-top: 40px;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
