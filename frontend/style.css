@@ -1,10 +1,10 @@
-/* General styles */
 body {
     font-family: monospace;
     background-color: #0fa4af;
     color: #333;
     border: 3px solid #003135;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+    position: relative;
 }
 
 .container{
@@ -17,8 +17,21 @@ body {
     z-index: 1000;
     border-bottom: 3px solid #003135;
     font-family: monospace;
+    font-size:x-large;
 }
 
+.container2 {
+    background-color: #0fa4af;
+    color: #121212;
+    position: sticky;
+    margin: 0 auto;
+    padding: 10px;
+    border-bottom: 3px solid #003135;
+    font-family: monospace;
+    font-size:x-large;
+    margin-bottom: 10px;
+
+}
 header {
     display: flex;
     align-items: center;
@@ -68,8 +81,7 @@ nav ul li a:hover {
     color: #afdde5;
 }
 
-/* Main banner */
-.banner {
+.banner, .blog_title {
     text-align: center;
     background-color: #003135;
     color: #121212;
@@ -88,7 +100,19 @@ nav ul li a:hover {
     margin-bottom: 10px;
     color: #121212;
 }
-
+.banner{
+    text-align: center;
+    background-color: #003135;
+    color: #121212;
+    margin-bottom: 40px;
+    border-bottom: 3px solid #003135;
+    background-image: url('https://media.newyorker.com/photos/5b0da55154617935a4921f9d/master/w_1600%2Cc_limit/Burdick-FlatEarth2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.9;
+    padding: 60px 20px;
+}
 
 .blog-section {
     display: grid;
@@ -107,7 +131,19 @@ nav ul li a:hover {
     box-shadow: 0 0 15px #0fa4af, 0 0 15px rgba(255, 231, 0.5);
     width: 100%;
     height: 100%;
+    position: relative;
+    z-index: 100;
     
+}
+
+.blog .container {
+    position: relative;
+}
+.container a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
 }
 
 .post:hover {
@@ -143,21 +179,15 @@ nav ul li a:hover {
 }
 
 
-.blog-title {
-    text-align: center;
-    font-size: 2.5rem;
-    color: #121212;
-    margin-bottom: 40px;
-}
-
 .chat_post{
-    background-color: #ç;
     border: 3px solid #003135;
-    overflow: hidden;
+    overflow: auto;
     transition: transform 0.3s, background-color 0.3s;
     font-size: 2rem;
-    margin-top: 20px;
+    margin-top: 15px;
     box-shadow: 0 0 15px #0fa4af, 0 0 10px rgba(255, 231, 0.5);
+    padding: 10px;
+    position: relative;
     }
 
 .post-reply {
@@ -233,6 +263,7 @@ nav ul li a:hover {
 }
 
 .action-button {
+    scale: 115%;
     background-color: #0f5f67;
     color: #ffffff;
     border: none;
@@ -254,7 +285,6 @@ nav ul li a:hover {
     margin-left: 10px;
 }
 
-/* Popup styles */
 .popup {
     display: none;
     position: fixed;
