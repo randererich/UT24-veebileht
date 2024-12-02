@@ -8,7 +8,7 @@
 </head>
 <body>
     <!-- Header Section -->
-    <header class="chat_container">
+    <header class="container">
         <a href="landing_page.html">
             <h1>ELMTÜ</h1>
         </a>
@@ -20,12 +20,12 @@
                 <li><a href="meist.html">Meist</a></li>
             </ul>
         </nav>
-        <button class="action-button new-post-btn" onclick="showPopup()">Loo uus postitus</button>
     </header>
 
 
-    <section id="blog" class="container2">
+    <section id="blog" class="container">
         <h2 class="blog-title">SERVA-ÄÄRSED ARUTELUD</h2>
+        <button class="action-button new-post" onclick="showPopup()">Loo uus postitus</button>
 
 
     <div id="popup" class="popup">
@@ -36,7 +36,7 @@
     </div>
 
         <!-- Blog Post 1 -->
-        <div class="post">
+        <div class="chat_post">
             <div class="post-author">
                 <span class="username">MaailmaUurija</span>
                 <span class="post-date">03.11.2024</span>
@@ -51,7 +51,7 @@
         </div>
 
         <!-- Blog Post 2 with Replies -->
-        <div class="post">
+        <div class="chat_post">
             <div class="post-author">
                 <span class="username">Kosmosetark</span>
                 <span class="post-date">05.11.2024</span>
@@ -81,7 +81,7 @@
         </div>
 
         <!-- Blog Post 3 -->
-        <div class="post">
+        <div class="chat_post">
             <div class="post-author">
                 <span class="username">MaailmaAvastaja</span>
                 <span class="post-date">06.11.2024</span>
@@ -96,7 +96,7 @@
         </div>
 
         <!-- Blog Post 4 -->
-        <div class="post">
+        <div class="chat_post">
             <div class="post-author">
                 <span class="username">Skeptik</span>
                 <span class="post-date">07.11.2024</span>
@@ -111,7 +111,7 @@
         </div>
 
         <!-- Blog Post 5 with Replies -->
-        <div class="post">
+        <div class="chat_post">
             <div class="post-author">
                 <span class="username">Teadushuviline</span>
                 <span class="post-date">08.11.2024</span>
@@ -137,7 +137,7 @@
         </div>
 
         <!-- Blog Post 6 -->
-        <div class="post">
+        <div class="chat_post">
             <div class="post-author">
                 <span class="username">Arutleja</span>
                 <span class="post-date">09.11.2024</span>
@@ -157,7 +157,6 @@
         <p>&copy; 2024 ELMTÜ. Kõik õigused kaitstud.</p>
     </footer>
 
-    <!-- Popup koodi aitas Randeri suunistel koostada ChatGPT -->
     <div id="popup" class="popup">
         <div class="popup-content">
             <p>Lehekülg on hetkel hooldustööde tõttu suletud.</p>

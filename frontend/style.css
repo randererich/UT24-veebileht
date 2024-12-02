@@ -7,7 +7,7 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
 }
 
-.container, .chat_container {
+.container{
     background-color: #0fa4af;
     color: #121212;
     position: sticky;
@@ -15,11 +15,10 @@ body {
     padding: 20px;
     top: 0;
     z-index: 1000;
-    border: 3px solid #003135;
+    border-bottom: 3px solid #003135;
     font-family: monospace;
 }
 
-/* Header styles */
 header {
     display: flex;
     align-items: center;
@@ -28,16 +27,16 @@ header {
 }
 
 header a {
-    text-decoration: none; /* Remove underline */
-    color: #000; /* Set the desired color (e.g., black) */
+    text-decoration: none;
+    color: #000;
 }
 
 header a:visited {
-    color: #000; /* Keep the same color for visited links */
+    color: #000;
 }
 
 header a:hover {
-    color: #333; /* Optional: slightly darker on hover */
+    color: #afdde5; /* Optional: slightly darker on hover */
 }
 
 /* Navigation styles */
@@ -75,8 +74,7 @@ nav ul li a:hover {
     background-color: #003135;
     color: #121212;
     margin-bottom: 40px;
-    border: 3px solid #003135;
-    box-shadow: 0 0 15px #0fa4af, 0 0 30px rgba(255, 231, 0.5);
+    border-bottom: 3px solid #003135;
     background-image: url('https://media.newyorker.com/photos/5b0da55154617935a4921f9d/master/w_1600%2Cc_limit/Burdick-FlatEarth2.jpg');
     background-size: cover;
     background-position: center;
@@ -91,13 +89,7 @@ nav ul li a:hover {
     color: #121212;
 }
 
-.banner p {
-    font-size: 1.5rem;
-    max-width: 600px;
-    margin: 0 auto;
-}
 
-/* Blog sections */
 .blog-section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -106,14 +98,15 @@ nav ul li a:hover {
     z-index: 900;
 }
 
-/* Post styles */
 .post {
     background-color: #0fa4af;
     border: 3px solid #003135;
     overflow: hidden;
     transition: transform 0.3s, background-color 0.3s;
     font-size: 2rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+    box-shadow: 0 0 15px #0fa4af, 0 0 15px rgba(255, 231, 0.5);
+    width: 100%;
+    height: 100%;
     
 }
 
@@ -157,7 +150,16 @@ nav ul li a:hover {
     margin-bottom: 40px;
 }
 
-/* Post Reply */
+.chat_post{
+    background-color: #ç;
+    border: 3px solid #003135;
+    overflow: hidden;
+    transition: transform 0.3s, background-color 0.3s;
+    font-size: 2rem;
+    margin-top: 20px;
+    box-shadow: 0 0 15px #0fa4af, 0 0 10px rgba(255, 231, 0.5);
+    }
+
 .post-reply {
     margin-left: 20px;
     padding: 10px;
@@ -166,8 +168,13 @@ nav ul li a:hover {
 
 .post-reply .post-author {
     margin-bottom: 10px;
+    font-size: 1.2rem;
     font-weight: bold;
-    font-size: 0.9rem;
+    font-family: monospace monospace;
+}
+
+.post-reply .post-date {
+    font-weight: normal;
 }
 
 .username {
@@ -179,7 +186,6 @@ nav ul li a:hover {
     color: #333;
 }
 
-/* Gallery styles */
 .gallery {
     display: flex;
     flex-wrap: wrap;
@@ -214,7 +220,6 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
-/* Date Styling */
 .post-date {
     display: block;
     font-size: 0.9rem;
@@ -227,7 +232,6 @@ nav ul li a:hover {
     margin-bottom: 20px;
 }
 
-/* Action buttons */
 .action-button {
     background-color: #0f5f67;
     color: #ffffff;
@@ -240,6 +244,10 @@ nav ul li a:hover {
 
 .action-button:hover {
     background-color: #007c8b;
+}
+
+.new-post {
+    margin-left: 20px;
 }
 
 .reply-btn {
